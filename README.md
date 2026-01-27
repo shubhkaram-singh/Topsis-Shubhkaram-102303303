@@ -17,7 +17,7 @@ TOPSIS is based on the principle that the best alternative should have the **sho
    The decision matrix is normalized using vector normalization to bring all criteria to a comparable scale:
 
    \[
-   r_{ij} = \frac{x_{ij}}{\sqrt{\sum_{i=1}^{m} x_{ij}^2}}
+r_ij = x_ij / sqrt( Σ (x_ij²) )
    \]
 
 2. **Weighting**
@@ -25,7 +25,7 @@ TOPSIS is based on the principle that the best alternative should have the **sho
    Each normalized value is multiplied by its corresponding criterion weight:
 
    \[
-   v_{ij} = r_{ij} \times w_j
+v_ij = r_ij × w_j
    \]
 
 3. **Ideal Best and Ideal Worst**
@@ -40,11 +40,10 @@ TOPSIS is based on the principle that the best alternative should have the **sho
    Euclidean distance from ideal best and ideal worst is calculated:
 
    \[
-   S_i^+ = \sqrt{\sum (v_{ij} - V_j^+)^2}
-   \]
+S_i+ = sqrt( Σ (v_ij − v_j+)² )   \]
 
    \[
-   S_i^- = \sqrt{\sum (v_{ij} - V_j^-)^2}
+S_i− = sqrt( Σ (v_ij − v_j−)² )
    \]
 
 5. **TOPSIS Score**
@@ -52,7 +51,7 @@ TOPSIS is based on the principle that the best alternative should have the **sho
    The performance score is computed as:
 
    \[
-   P_i = \frac{S_i^-}{S_i^+ + S_i^-}
+P_i = S_i− / (S_i+ + S_i−)
    \]
 
    Higher score indicates a better alternative.
@@ -156,14 +155,3 @@ Roll Number: 102303303
 
 ````
 
----
-
-# 🟢 STEP 2 – PUSH THIS UPDATE TO GITHUB
-
-After pasting and saving `README.md`, run:
-
-```bash
-git add README.md
-git commit -m "Updated README with detailed methodology and results"
-git push
-````
