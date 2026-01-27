@@ -155,3 +155,38 @@ Roll Number: 102303303
 
 ````
 
+## Experiment Setup
+
+We evaluated five pre-trained sentence similarity models from HuggingFace on a small benchmark dataset of sentence pairs.
+
+### Models Compared
+- all-MiniLM-L6-v2  
+- all-mpnet-base-v2  
+- paraphrase-MiniLM-L6-v2  
+- sentence-t5-base  
+- stsb-roberta-large  
+
+### Evaluation Criteria
+The models were compared using the following criteria:
+
+- **Average Similarity** (higher is better)  
+- **Inference Time (ms)** (lower is better)  
+- **Model Size (MB)** (lower is better)  
+- **Embedding Dimension** (lower is better)  
+
+Weights used: `1, 1, 1, 1`  
+Impacts used: `+, -, -, -`  
+
+---
+
+## TOPSIS Result Table
+
+The final ranking obtained using the TOPSIS method is shown below:
+
+| Rank | Model              | Topsis Score |
+|------|-------------------|--------------|
+| 1    | sentence-t5-base  | Highest      |
+| 2    | all-MiniLM-L6-v2  |              |
+| 3    | paraphrase-MiniLM-L6-v2 |       |
+| 4    | all-mpnet-base-v2|              |
+| 5    | s
