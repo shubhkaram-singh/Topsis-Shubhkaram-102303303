@@ -153,7 +153,7 @@ The complete implementation, result table, and ranking graph are provided in:
 **Shubhkaram Singh**
 Roll Number: 102303303
 
-````
+
 
 ## Experiment Setup
 
@@ -179,14 +179,31 @@ Impacts used: `+, -, -, -`
 
 ---
 
+
 ## TOPSIS Result Table
 
 The final ranking obtained using the TOPSIS method is shown below:
 
-| Rank | Model              | Topsis Score |
-|------|-------------------|--------------|
-| 1    | sentence-t5-base  | Highest      |
-| 2    | all-MiniLM-L6-v2  |              |
-| 3    | paraphrase-MiniLM-L6-v2 |       |
-| 4    | all-mpnet-base-v2|              |
-| 5    | s
+| Rank | Model                   |
+|------|-------------------------|
+| 1    | sentence-t5-base        |
+| 2    | all-MiniLM-L6-v2        |
+| 3    | paraphrase-MiniLM-L6-v2 |
+| 4    | all-mpnet-base-v2       |
+| 5    | stsb-roberta-large      |
+
+---
+
+## Ranking Visualization
+
+The bar chart below shows the TOPSIS scores of all evaluated models.
+
+![TOPSIS Ranking](results/topsis_ranking.png)
+
+---
+
+## Final Conclusion
+
+Using the TOPSIS multi-criteria decision-making method, **sentence-t5-base** achieved the highest TOPSIS score and is selected as the **best pre-trained model for Sentence Similarity** among the evaluated alternatives.
+
+This approach ensures a balanced selection by considering accuracy, efficiency, and model complexity together.
